@@ -1,0 +1,18 @@
+<h2>Exercice 2 : Fiches utilisateurs</h2>
+
+<div *ngIf="users.length > 0; else noUser">
+  <div
+    *ngFor="let user of users; let i = index; let even = even"
+    class="user-card"
+    [ngClass]="even ? 'pair' : 'impair'">
+    <p><strong>Nom :</strong> {{ user.nom }}</p>
+    <p><strong>Âge :</strong> {{ user.age }}</p>
+    <p><strong>Email :</strong> {{ user.email }}</p>
+  </div>
+</div>
+
+<ng-template #noUser>
+  <p>Aucun utilisateur trouvé dans la base de données</p>
+</ng-template>
+
+<button (click)="reset()">Reset</button>
