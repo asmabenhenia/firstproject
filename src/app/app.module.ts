@@ -9,6 +9,7 @@ import { NameComponent } from './name/name.component';
 import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { ProductsComponent } from './products/products.component';
     NameComponent,
     UserComponent,
     ProductsComponent,
+    ProductDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

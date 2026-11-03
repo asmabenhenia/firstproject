@@ -1,0 +1,8 @@
+<article *ngIf="product as item">
+  <img [src]="item.image || 'assets/images_atelier2/no-image.png'"
+       [alt]="item.name" class="img-fluid mb-3" width="180" height="180">
+  <h2 class="h5">{{ item.name }}</h2>
+  <p class="mb-1">Price: {{ item.price | currency:'USD':'symbol':'1.2-2' }}</p>
+  <p class="mb-1">Quantity: {{ item.quantity }}</p>
+  <p>Code: {{ item.code }}</p>
+</article>

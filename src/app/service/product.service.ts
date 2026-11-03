@@ -12,16 +12,16 @@ export class ProductService {
       'Samsung Galaxy S9',
       500.0,
       50,
-      '../../assets/images/samsung-s9.png',
+      'assets/images_atelier2/samsung-s9.png',
     ),
-    new Product(2, 'NK-5P', 'Nokia 5.1 Plus', 60.0, 60),
+    new Product(2, 'NK-5P', 'Nokia 5.1 Plus', 60.0, 60, 'assets/images_atelier2/no-image.png'),
     new Product(
       3,
       'IP-7',
       'iPhone 7',
       600.0,
       30,
-      '../../assets/images/iphone-7.png',
+      'assets/images_atelier2/iphone-7.png',
     ),
     new Product(
       4,
@@ -29,7 +29,7 @@ export class ProductService {
       'Redmi 14',
       1200.0,
       50,
-      '../../assets/images/xiaomi-14.png',
+      'assets/images_atelier2/xiaomi-14.png',
     ),
   ];
   constructor() {}
