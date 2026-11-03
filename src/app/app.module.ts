@@ -8,21 +8,18 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { NameComponent } from './name/name.component';
 import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
-
+import { ProductsComponent } from './products/products.component';
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     ContactsComponent,
     NameComponent,
-    UserComponent
+    UserComponent,
+    ProductsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
