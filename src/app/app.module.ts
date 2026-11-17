@@ -10,6 +10,7 @@ import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { SigninComponent } from './signin/signin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     UserComponent,
     ProductsComponent,
     ProductDetailsComponent,
+    SigninComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
