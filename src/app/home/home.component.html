@@ -1,0 +1,13 @@
+<section class="home py-4">
+  <h1 class="display-5 mb-2">{{ title }}</h1>
+  <p class="lead text-muted mb-4">{{ description }}</p>
+
+  <h2 class="h4 mb-3">Promotions</h2>
+  <div class="row g-3">
+    <div class="col-12 col-md-4" *ngFor="let promo of promotions">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body fw-semibold">{{ promo }}</div>
+      </div>
+    </div>
+  </div>
+</section>
