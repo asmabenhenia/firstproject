@@ -7,6 +7,23 @@ import { ProductService } from '../service/product.service';
 import { Product } from '../shared/product';
 
 describe('ProductsComponent', () => {
+  it('deletes the selected product through the component and service', async () => {
+    await TestBed.configureTestingModule({
+      imports: [CommonModule],
+      declarations: [ProductsComponent, ProductDetailsComponent],
+      providers: [ProductService],
+    }).compileComponents();
+    const fixture = TestBed.createComponent(ProductsComponent);
+    const service = TestBed.inject(ProductService);
+    const deletion = spyOn(service, 'deleteProduct').and.callThrough();
+    fixture.detectChanges();
+    fixture.debugElement.queryAll(By.css('button'))[1].nativeElement.click();
+    fixture.detectChanges();
+    expect(deletion).toHaveBeenCalledOnceWith(2);
+    expect(fixture.componentInstance.products.map(product => product.id)).toEqual([1, 3, 4]);
+    expect(service.getProducts().map(product => product.id)).toEqual([1, 3, 4]);
+  });
+
   it('loads service products and passes each product to its details component', async () => {
     const products = [new Product(1, 'A', 'Phone A', 100, 5), new Product(2, 'B', 'Phone B', 200, 8)];
     const getProducts = jasmine.createSpy('getProducts').and.returnValue(products);

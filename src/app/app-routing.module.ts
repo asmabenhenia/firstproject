@@ -4,20 +4,21 @@ import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
-import { authGuard } from './guards/auth.guard';
+import { ProductsComponent } from './products/products.component';
 
+// Questions 1, 2 and 7 only: authentication and guards are not enabled.
 const routes: Routes = [
-  {path:"",canActivate:[authGuard], component:HomeComponent},
-  {path:"about", component:AboutComponent, canActivate:[authGuard]},
-  {path:"contacts", component:ContactsComponent,canActivate:[authGuard]},
-  {path:"contacts/:id", canActivate:[authGuard]},
-  {path:"signin", component:SigninComponent},
-  {path:"**", redirectTo:"", pathMatch:"full"}
- /*  {path:"", redirectTo:"about", pathMatch:"full"} */
+  { path: '', component: HomeComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'signin', component: SigninComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contacts', component: ContactsComponent },
+  { path: 'contacts/:id', component: ContactsComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
